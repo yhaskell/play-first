@@ -1,0 +1,22 @@
+@(title: String, message: String)
+
+@main(title) {
+
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src='@routes.Assets.at("js/index.js")'></script>
+
+    <ul id="persons">
+
+    </ul>
+
+
+    <form action="@routes.Application.addPerson()" method="post">
+        <input name="name" type="text"/>
+        <input type="submit" value="Add person">
+    </form>
+
+    <br/>
+
+    @message
+
+}
